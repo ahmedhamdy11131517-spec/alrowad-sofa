@@ -10,5 +10,196 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#050505;--panel:#0d0d0d;--panel2:#14110d;--gold:#f4c430;--gold2:#ffd84d;--gold3:#fff0a6;--text:#fffdf6;--muted:#cbbb91;--line:rgba(255,216,77,.30);--green:#25D366}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Cairo',sans-serif;background:radial-gradient(circle at 80% 0,rgba(255,216,77,.14),transparent 24%),linear-gradient(180deg,#040404,#090806 55%,#040404);color:var(--text);overflow-x:hidden}a{text-decoration:none;color:inherit}.wrap{width:min(1120px,calc(100% - 28px));margin:auto}.top{position:sticky;top:0;z-index:50;background:rgba(5,5,5,.76);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,216,77,.10)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:1.15rem;font-weight:900;letter-spacing:.02em}.brand b{color:var(--gold2)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:15px;padding:13px 18px;font-weight:900;border:1px solid transparent;transition:.25s ease;position:relative;overflow:hidden}.btn:hover{transform:translateY(-2px)}.call{background:linear-gradient(135deg,var(--gold),var(--gold3));color:#111;box-shadow:0 12px 28px rgba(255,216,77,.24)}.wa{background:linear-gradient(135deg,#25D366,#16b957);color:white;box-shadow:0 12px 30px rgba(37,211,102,.28);animation:pulse 2.4s ease-in-out infinite}.wa:before{content:"";position:absolute;top:-50%;bottom:-50%;width:28%;left:-40%;transform:skewX(-18deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);animation:shine 3.3s ease-in-out infinite}.wa-icon{width:26px;height:26px;display:block;position:relative;z-index:2;flex:0 0 26px}.wa span{position:relative;z-index:2}@keyframes pulse{0%,100%{box-shadow:0 12px 30px rgba(37,211,102,.24),0 0 0 0 rgba(37,211,102,.28)}50%{box-shadow:0 16px 38px rgba(37,211,102,.38),0 0 0 10px rgba(37,211,102,0)}}@keyframes shine{0%,42%{left:-40%}62%,100%{left:120%}}.hero{min-height:calc(100vh - 68px);display:grid;align-items:center;padding:48px 0}.hero-grid{display:grid;grid-template-columns:1fr .95fr;gap:36px;align-items:center}.tag{display:inline-flex;padding:9px 13px;border:1px solid var(--line);border-radius:999px;color:var(--gold2);background:rgba(255,216,77,.07);font-size:.9rem;font-weight:800;margin-bottom:16px}h1{font-size:clamp(2.4rem,6vw,5.6rem);line-height:1.06;margin:0 0 16px;letter-spacing:-.045em}.gold{background:linear-gradient(90deg,var(--gold3),var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:var(--muted);line-height:1.9;font-size:clamp(1rem,2vw,1.16rem);max-width:650px;margin:0 0 22px}.price{display:inline-flex;align-items:baseline;gap:7px;margin-bottom:24px}.price strong{font-size:clamp(2rem,4vw,3.4rem);color:var(--gold2);text-shadow:0 0 22px rgba(255,216,77,.14)}.price span{color:var(--muted);font-weight:700}.actions{display:flex;flex-wrap:wrap;gap:11px}.cinema{position:relative;min-height:500px;border-radius:32px;padding:14px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,216,77,.05));border:1px solid var(--line);box-shadow:0 35px 90px rgba(0,0,0,.45);overflow:hidden}.cinema:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.42));pointer-events:none}.room{position:absolute;inset:14px;border-radius:25px;overflow:hidden;background:linear-gradient(180deg,#695029 0,#342718 19%,#302416 20%,#1d1712 54%,#100e0c 54%)}.room:before{content:"";position:absolute;left:18%;right:18%;top:0;height:38%;background:radial-gradient(circle at 50% 0,rgba(255,229,117,.52),transparent 68%)}.panels{position:absolute;left:8%;right:8%;top:13%;height:22%;display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.panels i{border:1px solid rgba(255,222,90,.18);border-radius:16px;background:rgba(255,255,255,.025)}.sofa{position:absolute;left:8%;right:8%;bottom:15%;height:34%;border-radius:34px 34px 18px 18px;background:linear-gradient(180deg,#dfc37c,#a67e32);box-shadow:0 24px 40px rgba(0,0,0,.32)}.sofa:before,.sofa:after{content:"";position:absolute;top:-18%;width:43%;height:53%;border-radius:24px;background:linear-gradient(180deg,#ebd193,#b38b3d)}.sofa:before{right:2%}.sofa:after{left:2%}.seat{position:absolute;left:7%;right:7%;bottom:18%;height:17%;border-radius:18px;background:#efd799}.table{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);width:39%;height:11%;border-radius:999px;background:linear-gradient(180deg,#3d2c14,#1b1208);box-shadow:0 12px 24px rgba(0,0,0,.34)}.price-badge{position:absolute;z-index:4;left:24px;top:24px;background:rgba(5,5,5,.78);border:1px solid var(--line);backdrop-filter:blur(10px);padding:12px 16px;border-radius:18px}.price-badge small{display:block;color:var(--muted);font-weight:700}.price-badge b{font-size:1.45rem;color:var(--gold2)}.section{padding:70px 0}.head{text-align:center;max-width:700px;margin:0 auto 28px}.head h2{font-size:clamp(1.8rem,4vw,3rem);margin:0 0 8px;color:var(--gold2)}.head p{margin:0;color:var(--muted);line-height:1.8}.real-compare{border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:0 26px 70px rgba(0,0,0,.44),0 0 42px rgba(255,216,77,.08);background:#080706}.real-compare img{display:block;width:100%;height:auto}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{padding:23px;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,216,77,.035));border:1px solid rgba(255,216,77,.15);text-align:center}.feature b{display:block;color:var(--gold2);font-size:1.06rem;margin-bottom:5px}.feature span{color:var(--muted);font-size:.92rem}.final{padding:34px;border-radius:30px;text-align:center;background:linear-gradient(135deg,#1b1608,#0a0905);border:1px solid var(--line);box-shadow:0 25px 70px rgba(0,0,0,.38)}.final h2{margin:0 0 8px;font-size:clamp(1.8rem,4vw,3rem);color:var(--gold2)}.final p{margin:0 0 20px;color:var(--muted)}.final .actions{justify-content:center}footer{text-align:center;color:#8f8464;font-size:.85rem;padding:28px 0 100px}.mobile{display:none;position:fixed;z-index:80;left:10px;right:10px;bottom:max(10px,env(safe-area-inset-bottom));padding:8px;border-radius:19px;background:rgba(5,5,5,.92);backdrop-filter:blur(16px);border:1px solid var(--line);gap:8px}.mobile a{flex:1}@media(max-width:900px){.hero{min-height:auto;padding:42px 0 28px}.hero-grid{grid-template-columns:1fr}.cinema{min-height:430px}.features{grid-template-columns:1fr}}@media(max-width:640px){.nav .call{display:none}.hero{text-align:center}.tag{margin-inline:auto}.lead{margin-inline:auto}.price{justify-content:center}.actions{justify-content:center}.actions .btn{flex:1 1 45%}.cinema{min-height:390px}.section{padding:54px 0}.mobile{display:flex}footer{padding-bottom:110px}.price-badge{left:16px;top:16px}.real-compare{border-radius:20px}}@media(prefers-reduced-motion:reduce){.wa,.wa:before{animation:none}}</style>
-</head><body><header class="top"><div class="wrap nav"><div class="brand"><b>الرواد</b> للتنظيف</div><a class="btn call" href="tel:+966500892799">اتصل الآن</a></div></header><main><section class="hero"><div class="wrap hero-grid"><div><div class="tag">تنظيف مجالس وكنب • الرياض</div><h1>مجلسك يرجع <span class="gold">أفخم وأنظف</span></h1><p class="lead">تنظيف مجالس وكنب بالرياض بخدمة سريعة وتواصل مباشر، مع تغطية جميع أنحاء الرياض.</p><div class="price"><span>ابتداءً من</span><strong>140 ريال</strong></div><div class="actions"><a class="btn call" href="tel:+966500892799">📞 اتصال</a><a class="btn wa" href="https://wa.me/966500892799?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D9%85%D8%AC%D9%84%D8%B3%20%D8%A3%D9%88%20%D9%83%D9%86%D8%A8" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#fff"/><path fill="#25D366" d="M16 5.2A10.7 10.7 0 0 0 6.8 21.4L5.4 26.6l5.3-1.4A10.7 10.7 0 1 0 16 5.2zm0 19.5c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.1.8.8-3-.2-.4A8.8 8.8 0 1 1 16 24.7zm4.9-6.5c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.5-1.8-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2.1-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.3 0 1.3 1 2.6 1.1 2.8.1.2 1.9 3 4.7 4.1.7.3 1.2.5 1.6.6.7.2 1.3.2 1.7.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/></svg><span>واتساب</span></a></div></div><div class="cinema"><div class="price-badge"><small>السعر يبدأ من</small><b>140 ريال</b></div><div class="room"><div class="panels"><i></i><i></i><i></i></div><div class="sofa"></div><div class="seat"></div><div class="table"></div></div></div></div></section><section class="section" id="before-after"><div class="wrap"><div class="head"><h2>الفرق واضح من أول نظرة</h2><p>قبل وبعد لنفس المجلس بصورة واقعية وفاخرة.</p></div><div class="real-compare"><img src="before-after-majlis.webp" alt="قبل وبعد تنظيف مجلس بالرياض" loading="lazy"></div></div></section><section class="section"><div class="wrap"><div class="features"><div class="feature"><b>تنظيف عميق</b><span>للمجالس والكنب</span></div><div class="feature"><b>كل الرياض</b><span>تغطية جميع الأحياء</span></div><div class="feature"><b>حجز سريع</b><span>اتصال أو واتساب مباشر</span></div></div></div></section><section class="section"><div class="wrap final"><h2>جاهز تحجز؟</h2><p>تواصل مع الرواد الآن على 0500892799</p><div class="actions"><a class="btn call" href="tel:+966500892799">📞 اتصل الآن</a><a class="btn wa" href="https://wa.me/966500892799?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D9%85%D8%AC%D9%84%D8%B3%20%D8%A3%D9%88%20%D9%83%D9%86%D8%A8" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#fff"/><path fill="#25D366" d="M16 5.2A10.7 10.7 0 0 0 6.8 21.4L5.4 26.6l5.3-1.4A10.7 10.7 0 1 0 16 5.2zm0 19.5c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.1.8.8-3-.2-.4A8.8 8.8 0 1 1 16 24.7zm4.9-6.5c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.5-1.8-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2.1-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.3 0 1.3 1 2.6 1.1 2.8.1.2 1.9 3 4.7 4.1.7.3 1.2.5 1.6.6.7.2 1.3.2 1.7.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/></svg><span>واتساب</span></a></div></div></section></main><footer>© الرواد — تنظيف مجالس وكنب بالرياض</footer><div class="mobile"><a class="btn call" href="tel:+966500892799">📞 اتصال</a><a class="btn wa" href="https://wa.me/966500892799?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D9%85%D8%AC%D9%84%D8%B3%20%D8%A3%D9%88%20%D9%83%D9%86%D8%A8" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#fff"/><path fill="#25D366" d="M16 5.2A10.7 10.7 0 0 0 6.8 21.4L5.4 26.6l5.3-1.4A10.7 10.7 0 1 0 16 5.2zm0 19.5c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.1.8.8-3-.2-.4A8.8 8.8 0 1 1 16 24.7zm4.9-6.5c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.5-1.8-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2.1-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.3 0 1.3 1 2.6 1.1 2.8.1.2 1.9 3 4.7 4.1.7.3 1.2.5 1.6.6.7.2 1.3.2 1.7.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/></svg><span>واتساب</span></a></div></body></html>
+:root{
+  --bg:#050505;
+  --panel:#0d0d0d;
+  --panel2:#14110d;
+  --gold:#f4c430;
+  --gold2:#ffd84d;
+  --gold3:#fff0a6;
+  --text:#fffdf6;
+  --muted:#cbbb91;
+  --line:rgba(255,216,77,.30);
+  --green:#25D366;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Cairo',sans-serif;
+  background:
+    radial-gradient(circle at 80% 0,rgba(255,216,77,.14),transparent 24%),
+    linear-gradient(180deg,#040404,#090806 55%,#040404);
+  color:var(--text);
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1120px,calc(100% - 28px));margin:auto}
+.top{position:sticky;top:0;z-index:50;background:rgba(5,5,5,.76);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,216,77,.10)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:1.15rem;font-weight:900;letter-spacing:.02em}
+.brand b{color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:15px;padding:13px 18px;font-weight:900;border:1px solid transparent;transition:.25s ease;position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-2px)}
+.call{
+  background:linear-gradient(135deg,var(--gold),var(--gold3));
+  color:#111;
+  box-shadow:0 12px 28px rgba(255,216,77,.24);
+}
+.wa{
+  background:linear-gradient(135deg,#25D366,#16b957);
+  color:white;
+  box-shadow:0 12px 30px rgba(37,211,102,.28);
+  animation:pulse 2.4s ease-in-out infinite;
+}
+.wa:before{
+  content:"";
+  position:absolute;
+  top:-50%;bottom:-50%;width:28%;left:-40%;
+  transform:skewX(-18deg);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);
+  animation:shine 3.3s ease-in-out infinite;
+}
+.wa-icon{width:26px;height:26px;display:block;position:relative;z-index:2;flex:0 0 26px}
+.wa span{position:relative;z-index:2}
+@keyframes pulse{
+  0%,100%{box-shadow:0 12px 30px rgba(37,211,102,.24),0 0 0 0 rgba(37,211,102,.28)}
+  50%{box-shadow:0 16px 38px rgba(37,211,102,.38),0 0 0 10px rgba(37,211,102,0)}
+}
+@keyframes shine{0%,42%{left:-40%}62%,100%{left:120%}}
+.hero{min-height:calc(100vh - 68px);display:grid;align-items:center;padding:48px 0}
+.hero-grid{display:grid;grid-template-columns:1fr .95fr;gap:36px;align-items:center}
+.tag{display:inline-flex;padding:9px 13px;border:1px solid var(--line);border-radius:999px;color:var(--gold2);background:rgba(255,216,77,.07);font-size:.9rem;font-weight:800;margin-bottom:16px}
+h1{font-size:clamp(2.4rem,6vw,5.6rem);line-height:1.06;margin:0 0 16px;letter-spacing:-.045em}
+.gold{background:linear-gradient(90deg,var(--gold3),var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);line-height:1.9;font-size:clamp(1rem,2vw,1.16rem);max-width:650px;margin:0 0 22px}
+.price{display:inline-flex;align-items:baseline;gap:7px;margin-bottom:24px}
+.price strong{font-size:clamp(2rem,4vw,3.4rem);color:var(--gold2);text-shadow:0 0 22px rgba(255,216,77,.14)}
+.price span{color:var(--muted);font-weight:700}
+.actions{display:flex;flex-wrap:wrap;gap:11px}
+.cinema{position:relative;min-height:500px;border-radius:32px;padding:14px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,216,77,.05));border:1px solid var(--line);box-shadow:0 35px 90px rgba(0,0,0,.45);overflow:hidden}
+.cinema:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.42));pointer-events:none}
+.room{position:absolute;inset:14px;border-radius:25px;overflow:hidden;background:linear-gradient(180deg,#695029 0,#342718 19%,#302416 20%,#1d1712 54%,#100e0c 54%)}
+.room:before{content:"";position:absolute;left:18%;right:18%;top:0;height:38%;background:radial-gradient(circle at 50% 0,rgba(255,229,117,.52),transparent 68%)}
+.panels{position:absolute;left:8%;right:8%;top:13%;height:22%;display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.panels i{border:1px solid rgba(255,222,90,.18);border-radius:16px;background:rgba(255,255,255,.025)}
+.sofa{position:absolute;left:8%;right:8%;bottom:15%;height:34%;border-radius:34px 34px 18px 18px;background:linear-gradient(180deg,#dfc37c,#a67e32);box-shadow:0 24px 40px rgba(0,0,0,.32)}
+.sofa:before,.sofa:after{content:"";position:absolute;top:-18%;width:43%;height:53%;border-radius:24px;background:linear-gradient(180deg,#ebd193,#b38b3d)}
+.sofa:before{right:2%}.sofa:after{left:2%}
+.seat{position:absolute;left:7%;right:7%;bottom:18%;height:17%;border-radius:18px;background:#efd799}
+.table{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);width:39%;height:11%;border-radius:999px;background:linear-gradient(180deg,#3d2c14,#1b1208);box-shadow:0 12px 24px rgba(0,0,0,.34)}
+.price-badge{position:absolute;z-index:4;left:24px;top:24px;background:rgba(5,5,5,.78);border:1px solid var(--line);backdrop-filter:blur(10px);padding:12px 16px;border-radius:18px}
+.price-badge small{display:block;color:var(--muted);font-weight:700}
+.price-badge b{font-size:1.45rem;color:var(--gold2)}
+.section{padding:70px 0}
+.head{text-align:center;max-width:700px;margin:0 auto 28px}
+.head h2{font-size:clamp(1.8rem,4vw,3rem);margin:0 0 8px;color:var(--gold2)}
+.head p{margin:0;color:var(--muted);line-height:1.8}
+.real-compare{border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:0 26px 70px rgba(0,0,0,.44),0 0 42px rgba(255,216,77,.08);background:#080706}
+.real-compare img{display:block;width:100%;height:auto}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.feature{padding:23px;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,216,77,.035));border:1px solid rgba(255,216,77,.15);text-align:center}
+.feature b{display:block;color:var(--gold2);font-size:1.06rem;margin-bottom:5px}
+.feature span{color:var(--muted);font-size:.92rem}
+.final{padding:34px;border-radius:30px;text-align:center;background:linear-gradient(135deg,#1b1608,#0a0905);border:1px solid var(--line);box-shadow:0 25px 70px rgba(0,0,0,.38)}
+.final h2{margin:0 0 8px;font-size:clamp(1.8rem,4vw,3rem);color:var(--gold2)}
+.final p{margin:0 0 20px;color:var(--muted)}
+.final .actions{justify-content:center}
+footer{text-align:center;color:#8f8464;font-size:.85rem;padding:28px 0 100px}
+.mobile{display:none;position:fixed;z-index:80;left:10px;right:10px;bottom:max(10px,env(safe-area-inset-bottom));padding:8px;border-radius:19px;background:rgba(5,5,5,.92);backdrop-filter:blur(16px);border:1px solid var(--line);gap:8px}
+.mobile a{flex:1}
+@media(max-width:900px){
+  .hero{min-height:auto;padding:42px 0 28px}
+  .hero-grid{grid-template-columns:1fr}
+  .cinema{min-height:430px}
+  .features{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .nav .call{display:none}
+  .hero{text-align:center}
+  .tag{margin-inline:auto}
+  .lead{margin-inline:auto}
+  .price{justify-content:center}
+  .actions{justify-content:center}
+  .actions .btn{flex:1 1 45%}
+  .cinema{min-height:390px}
+  .section{padding:54px 0}
+  .mobile{display:flex}
+  footer{padding-bottom:110px}
+  .price-badge{left:16px;top:16px}
+  .real-compare{border-radius:20px}
+}
+@media(prefers-reduced-motion:reduce){.wa,.wa:before{animation:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap nav">
+    <div class="brand"><b>الرواد</b> للتنظيف</div>
+    <a class="btn call" href="tel:+966500892799">اتصل الآن</a>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="tag">تنظيف مجالس وكنب • الرياض</div>
+      <h1>مجلسك يرجع <span class="gold">أفخم وأنظف</span></h1>
+      <p class="lead">تنظيف مجالس وكنب بالرياض بخدمة سريعة وتواصل مباشر، مع تغطية جميع أنحاء الرياض.</p>
+      <div class="price"><span>ابتداءً من</span><strong>140 ريال</strong></div>
+      <div class="actions">
+        <a class="btn call" href="tel:+966500892799">📞 اتصال</a>
+        <a class="btn wa" href="https://wa.me/966500892799?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D9%85%D8%AC%D9%84%D8%B3%20%D8%A3%D9%88%20%D9%83%D9%86%D8%A8" target="_blank" rel="noopener">
+          <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#fff"/><path fill="#25D366" d="M16 5.2A10.7 10.7 0 0 0 6.8 21.4L5.4 26.6l5.3-1.4A10.7 10.7 0 1 0 16 5.2zm0 19.5c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.1.8.8-3-.2-.4A8.8 8.8 0 1 1 16 24.7zm4.9-6.5c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.5-1.8-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2.1-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.3 0 1.3 1 2.6 1.1 2.8.1.2 1.9 3 4.7 4.1.7.3 1.2.5 1.6.6.7.2 1.3.2 1.7.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/></svg>
+          <span>واتساب</span>
+        </a>
+      </div>
+    </div>
+    <div class="cinema">
+      <div class="price-badge"><small>السعر يبدأ من</small><b>140 ريال</b></div>
+      <div class="room"><div class="panels"><i></i><i></i><i></i></div><div class="sofa"></div><div class="seat"></div><div class="table"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="before-after">
+  <div class="wrap">
+    <div class="head"><h2>الفرق واضح من أول نظرة</h2><p>قبل وبعد لنفس المجلس بصورة واقعية وفاخرة.</p></div>
+    <div class="real-compare"><img src="before-after-majlis-final.svg" alt="قبل وبعد تنظيف مجلس بالرياض" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="features">
+      <div class="feature"><b>تنظيف عميق</b><span>للمجالس والكنب</span></div>
+      <div class="feature"><b>كل الرياض</b><span>تغطية جميع الأحياء</span></div>
+      <div class="feature"><b>حجز سريع</b><span>اتصال أو واتساب مباشر</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap final">
+    <h2>جاهز تحجز؟</h2>
+    <p>تواصل مع الرواد الآن على 0500892799</p>
+    <div class="actions">
+      <a class="btn call" href="tel:+966500892799">📞 اتصل الآن</a>
+      <a class="btn wa" href="https://wa.me/966500892799?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D9%85%D8%AC%D9%84%D8%B3%20%D8%A3%D9%88%20%D9%83%D9%86%D8%A8" target="_blank" rel="noopener">
+        <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#fff"/><path fill="#25D366" d="M16 5.2A10.7 10.7 0 0 0 6.8 21.4L5.4 26.6l5.3-1.4A10.7 10.7 0 1 0 16 5.2zm0 19.5c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.1.8.8-3-.2-.4A8.8 8.8 0 1 1 16 24.7zm4.9-6.5c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.5-1.8-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2.1-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.3 0 1.3 1 2.6 1.1 2.8.1.2 1.9 3 4.7 4.1.7.3 1.2.5 1.6.6.7.2 1.3.2 1.7.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/></svg>
+        <span>واتساب</span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>© الرواد — تنظيف مجالس وكنب بالرياض</footer>
+<div class="mobile">
+  <a class="btn call" href="tel:+966500892799">📞 اتصال</a>
+  <a class="btn wa" href="https://wa.me/966500892799?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D9%85%D8%AC%D9%84%D8%B3%20%D8%A3%D9%88%20%D9%83%D9%86%D8%A8" target="_blank" rel="noopener">
+    <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#fff"/><path fill="#25D366" d="M16 5.2A10.7 10.7 0 0 0 6.8 21.4L5.4 26.6l5.3-1.4A10.7 10.7 0 1 0 16 5.2zm0 19.5c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.1.8.8-3-.2-.4A8.8 8.8 0 1 1 16 24.7zm4.9-6.5c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.5-1.8-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2.1-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.3 0 1.3 1 2.6 1.1 2.8.1.2 1.9 3 4.7 4.1.7.3 1.2.5 1.6.6.7.2 1.3.2 1.7.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/></svg>
+    <span>واتساب</span>
+  </a>
+</div>
+</body>
+</html>
