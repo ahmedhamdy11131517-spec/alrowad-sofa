@@ -73,12 +73,16 @@ a{text-decoration:none;color:inherit}
 h1{font-size:clamp(2.4rem,6vw,5.6rem);line-height:1.06;margin:0 0 16px;letter-spacing:-.045em}
 .gold{background:linear-gradient(90deg,var(--gold3),var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
 .lead{color:var(--muted);line-height:1.9;font-size:clamp(1rem,2vw,1.16rem);max-width:650px;margin:0 0 22px}
-.price{display:inline-flex;align-items:baseline;gap:7px;margin-bottom:24px}
-.price strong{font-size:clamp(2rem,4vw,3.4rem);color:var(--gold2);text-shadow:0 0 22px rgba(255,216,77,.14)}
-.price span{color:var(--muted);font-weight:700}
+.service-line{display:inline-block;margin-top:9px;color:var(--gold3);font-weight:900}
+.price{position:relative;display:inline-flex;align-items:baseline;gap:10px;margin:4px 0 24px;padding:16px 24px;border-radius:22px;overflow:hidden;background:linear-gradient(145deg,#0a0905,#211806);border:1px solid rgba(255,216,77,.48);box-shadow:0 16px 42px rgba(0,0,0,.42),0 0 28px rgba(255,216,77,.11)}
+.price:before{content:"";position:absolute;top:-55%;bottom:-55%;width:22%;left:-35%;transform:skewX(-20deg);background:linear-gradient(90deg,transparent,rgba(255,244,185,.55),transparent);animation:priceShine 3.4s ease-in-out infinite}
+.price strong{position:relative;z-index:1;font-size:clamp(2.5rem,5vw,4.2rem);line-height:1;color:var(--gold2);text-shadow:0 0 24px rgba(255,216,77,.22)}
+.price span{position:relative;z-index:1;color:#f3dfaa;font-weight:800;font-size:1.05rem}
+@keyframes priceShine{0%,44%{left:-35%}68%,100%{left:125%}}
 .actions{display:flex;flex-wrap:wrap;gap:11px}
 .cinema{position:relative;min-height:500px;border-radius:32px;padding:14px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,216,77,.05));border:1px solid var(--line);box-shadow:0 35px 90px rgba(0,0,0,.45);overflow:hidden}
-.cinema:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.42));pointer-events:none}
+.cinema:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.18));pointer-events:none}
+.hero-photo{position:absolute;inset:14px;width:calc(100% - 28px);height:calc(100% - 28px);object-fit:cover;border-radius:25px;display:block;background:#090806}
 .room{position:absolute;inset:14px;border-radius:25px;overflow:hidden;background:linear-gradient(180deg,#695029 0,#342718 19%,#302416 20%,#1d1712 54%,#100e0c 54%)}
 .room:before{content:"";position:absolute;left:18%;right:18%;top:0;height:38%;background:radial-gradient(circle at 50% 0,rgba(255,229,117,.52),transparent 68%)}
 .panels{position:absolute;left:8%;right:8%;top:13%;height:22%;display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
@@ -96,7 +100,7 @@ h1{font-size:clamp(2.4rem,6vw,5.6rem);line-height:1.06;margin:0 0 16px;letter-sp
 .head h2{font-size:clamp(1.8rem,4vw,3rem);margin:0 0 8px;color:var(--gold2)}
 .head p{margin:0;color:var(--muted);line-height:1.8}
 .real-compare{border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:0 26px 70px rgba(0,0,0,.44),0 0 42px rgba(255,216,77,.08);background:#080706}
-.real-compare img{display:block;width:100%;height:auto}
+.real-compare img{display:block;width:100%;height:auto;min-height:220px;object-fit:cover;background:#080706}
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .feature{padding:23px;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,216,77,.035));border:1px solid rgba(255,216,77,.15);text-align:center}
 .feature b{display:block;color:var(--gold2);font-size:1.06rem;margin-bottom:5px}
@@ -105,7 +109,8 @@ h1{font-size:clamp(2.4rem,6vw,5.6rem);line-height:1.06;margin:0 0 16px;letter-sp
 .final h2{margin:0 0 8px;font-size:clamp(1.8rem,4vw,3rem);color:var(--gold2)}
 .final p{margin:0 0 20px;color:var(--muted)}
 .final .actions{justify-content:center}
-footer{text-align:center;color:#8f8464;font-size:.85rem;padding:28px 0 100px}
+footer{text-align:center;color:#c9b784;font-size:.88rem;padding:30px 16px 110px;line-height:2;border-top:1px solid rgba(255,216,77,.12)}
+.footer-main{color:var(--gold2);font-weight:800}
 .mobile{display:none;position:fixed;z-index:80;left:10px;right:10px;bottom:max(10px,env(safe-area-inset-bottom));padding:8px;border-radius:19px;background:rgba(5,5,5,.92);backdrop-filter:blur(16px);border:1px solid var(--line);gap:8px}
 .mobile a{flex:1}
 @media(max-width:900px){
@@ -129,13 +134,13 @@ footer{text-align:center;color:#8f8464;font-size:.85rem;padding:28px 0 100px}
   .price-badge{left:16px;top:16px}
   .real-compare{border-radius:20px}
 }
-@media(prefers-reduced-motion:reduce){.wa,.wa:before{animation:none}}
+@media(prefers-reduced-motion:reduce){.wa,.wa:before,.price:before{animation:none}}
 </style>
 </head>
 <body>
 <header class="top">
   <div class="wrap nav">
-    <div class="brand"><b>الرواد</b> للتنظيف</div>
+    <div class="brand"><b>شركة الرواد</b> لتنظيف الكنب والمجالس بالرياض</div>
     <a class="btn call" href="tel:+966500892799">اتصل الآن</a>
   </div>
 </header>
@@ -145,7 +150,7 @@ footer{text-align:center;color:#8f8464;font-size:.85rem;padding:28px 0 100px}
     <div>
       <div class="tag">تنظيف مجالس وكنب • الرياض</div>
       <h1>مجلسك يرجع <span class="gold">أفخم وأنظف</span></h1>
-      <p class="lead">تنظيف مجالس وكنب بالرياض بخدمة سريعة وتواصل مباشر، مع تغطية جميع أنحاء الرياض.</p>
+      <p class="lead">تنظيف مجالس وكنب بالرياض بخدمة سريعة وتواصل مباشر، مع تغطية جميع أنحاء الرياض.<br><strong class="service-line">تنظيف - غسيل - تعقيم - تجفيف — ونهتم بأدق التفاصيل</strong></p>
       <div class="price"><span>ابتداءً من</span><strong>140 ريال</strong></div>
       <div class="actions">
         <a class="btn call" href="tel:+966500892799">📞 اتصال</a>
@@ -157,7 +162,7 @@ footer{text-align:center;color:#8f8464;font-size:.85rem;padding:28px 0 100px}
     </div>
     <div class="cinema">
       <div class="price-badge"><small>السعر يبدأ من</small><b>140 ريال</b></div>
-      <div class="room"><div class="panels"><i></i><i></i><i></i></div><div class="sofa"></div><div class="seat"></div><div class="table"></div></div>
+      <img id="workerImg" class="hero-photo" alt="عامل شركة الرواد ينظف مجلس وكنب بالرياض">
     </div>
   </div>
 </section>
@@ -165,7 +170,7 @@ footer{text-align:center;color:#8f8464;font-size:.85rem;padding:28px 0 100px}
 <section class="section" id="before-after">
   <div class="wrap">
     <div class="head"><h2>الفرق واضح من أول نظرة</h2><p>قبل وبعد لنفس المجلس بصورة واقعية وفاخرة.</p></div>
-    <div class="real-compare"><img src="before-after-majlis-final.svg" alt="قبل وبعد تنظيف مجلس بالرياض" loading="lazy"></div>
+    <div class="real-compare"><img id="beforeAfterImg" alt="قبل وبعد تنظيف مجلس بالرياض"></div>
   </div>
 </section>
 
@@ -193,7 +198,11 @@ footer{text-align:center;color:#8f8464;font-size:.85rem;padding:28px 0 100px}
   </div>
 </section>
 </main>
-<footer>© الرواد — تنظيف مجالس وكنب بالرياض</footer>
+<footer>
+  <div class="footer-main">© 2026 شركة الرواد لتنظيف الكنب والمجالس بالرياض — جميع الحقوق محفوظة</div>
+  <div>عنوان الشركة: الرياض - حي النزهة</div>
+  <div>مواعيد العمل: يوميًا من الساعة 8 صباحًا إلى الساعة 11 مساءً</div>
+</footer>
 <div class="mobile">
   <a class="btn call" href="tel:+966500892799">📞 اتصال</a>
   <a class="btn wa" href="https://wa.me/966500892799?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D9%85%D8%AC%D9%84%D8%B3%20%D8%A3%D9%88%20%D9%83%D9%86%D8%A8" target="_blank" rel="noopener">
@@ -201,5 +210,23 @@ footer{text-align:center;color:#8f8464;font-size:.85rem;padding:28px 0 100px}
     <span>واتساب</span>
   </a>
 </div>
+<script>
+async function loadB64Image(id, parts){
+  try{
+    const chunks = await Promise.all(parts.map(async p => {
+      const r = await fetch(p, {cache:"no-store"});
+      if(!r.ok) throw new Error(p);
+      return (await r.text()).trim();
+    }));
+    document.getElementById(id).src = "data:image/jpeg;base64," + chunks.join("");
+  }catch(e){ console.error("image load failed", e); }
+}
+loadB64Image("workerImg",[
+  "assets/worker-1.b64","assets/worker-2.b64","assets/worker-3.b64","assets/worker-4.b64"
+]);
+loadB64Image("beforeAfterImg",[
+  "assets/before-1.b64","assets/before-2.b64","assets/before-3a.b64","assets/before-3b.b64","assets/before-4.b64","assets/before-5.b64"
+]);
+</script>
 </body>
 </html>
