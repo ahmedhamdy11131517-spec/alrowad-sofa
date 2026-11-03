@@ -136,6 +136,31 @@ footer{text-align:center;color:#c9b784;font-size:.88rem;padding:30px 16px 110px;
 }
 @media(prefers-reduced-motion:reduce){.wa,.wa:before,.price:before{animation:none}}
 </style>
+
+<!-- TikTok Pixel: browser-only measurement (no Events API token) -->
+<script>
+!function(w,d,t){
+ w.TiktokAnalyticsObject=t;
+ var ttq=w[t]=w[t]||[];
+ ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];
+ ttq.setAndDefer=function(q,m){q[m]=function(){q.push([m].concat(Array.prototype.slice.call(arguments,0)))}};
+ for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+ ttq.instance=function(id){for(var q=ttq._i[id]||[],i=0;i<ttq.methods.length;i++)ttq.setAndDefer(q,ttq.methods[i]);return q};
+ ttq.load=function(id,options){
+  var sdk="https://analytics.tiktok.com/i18n/pixel/events.js";
+  ttq._i=ttq._i||{};ttq._i[id]=[];ttq._i[id]._u=sdk;
+  ttq._t=ttq._t||{};ttq._t[id]=+new Date();
+  ttq._o=ttq._o||{};ttq._o[id]=options||{};
+  var s=d.createElement("script");s.type="text/javascript";s.async=true;
+  s.src=sdk+"?sdkid="+id+"&lib="+t;
+  var first=d.getElementsByTagName("script")[0];first.parentNode.insertBefore(s,first);
+ };
+ ttq.load('DBL609JC77U8I4RJ32N0');
+ ttq.page();
+}(window,document,'ttq');
+</script>
+<!-- End TikTok Pixel -->
+
 </head>
 <body>
 <header class="top">
@@ -228,5 +253,23 @@ loadB64Image("beforeAfterImg",[
   "assets/before-1.b64","assets/before-2.b64","assets/before-3a.b64","assets/before-3b.b64","assets/before-4.b64","assets/before-5.b64"
 ]);
 </script>
+
+<!-- TikTok Pixel: track clicks on all existing phone and WhatsApp links -->
+<script>
+document.addEventListener('click',function(event){
+  var el=event.target && event.target.closest ? event.target.closest('a[href]') : null;
+  if (!el) return;
+  var href=el.getAttribute('href')||'';
+  var phone=/^tel:/i.test(href);
+  var whatsapp=/^(?:https?:\/\/)?(?:wa\.me\/|api\.whatsapp\.com\/send)/i.test(href);
+  if (!phone && !whatsapp) return;
+  if (window.ttq && typeof window.ttq.track==='function'){
+    var channel=whatsapp ? 'WhatsApp' : 'Phone';
+    window.ttq.track('ClickButton',{description:channel+' button click',button_name:channel});
+  }
+},true);
+</script>
+<!-- End contact-button click tracking -->
+
 </body>
 </html>
