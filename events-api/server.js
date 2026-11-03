@@ -39,10 +39,11 @@ http.createServer(async(req,res)=>{
   const user={ip,user_agent:ua};
   if(typeof data.ttp==='string'&&data.ttp.length<220)user.ttp=data.ttp;
   if(typeof data.ttclid==='string'&&data.ttclid.length<220)user.ttclid=data.ttclid;
-  const evt={event:'ClickButton',event_time:Math.floor(Date.now()/1000),event_id:data.event_id,user,page:{url:page.href},properties:{description:data.channel+' button click'}};
+  const evt={event:'ClickButton',event_time:Math.floor(Date.now()/1000),event_id:data.event_id,user,page:{url:page.href},properties:{description:data.channel+' button click',button_name:data.channel}};
   const response=await fetch('https://business-api.tiktok.com/open_api/v1.3/event/track/',{method:'POST',headers:{'Access-Token':token,'Content-Type':'application/json'},body:JSON.stringify({event_source:'web',event_source_id:pixel,data:[evt]}),signal:AbortSignal.timeout(12000)});
   const result=await response.json().catch(()=>({}));
   if(!response.ok||result.code!==0){console.error('TikTok response',response.status,result.code);return output(res,502,{error:'tiktok_rejected',code:result.code??null},origin)}
-  return output(res,200,{ok:true},origin);
+  console.log('TikTok accepted',data.event_id,data.channel,result.request_id||'');
+  return output(res,200,{ok:true,request_id:result.request_id||null},origin);
  }catch(err){console.error('Relay processing failed',err?.message);return output(res,500,{error:'relay_error'},origin)}
 }).listen(port,'0.0.0.0',()=>console.log('Events relay active',port));
