@@ -254,20 +254,40 @@ loadB64Image("beforeAfterImg",[
 ]);
 </script>
 
-<!-- TikTok Pixel: track clicks on all existing phone and WhatsApp links -->
+<!-- TikTok Pixel and Events API: shared event IDs for contact-button clicks -->
 <script>
-document.addEventListener('click',function(event){
-  var el=event.target && event.target.closest ? event.target.closest('a[href]') : null;
-  if (!el) return;
-  var href=el.getAttribute('href')||'';
-  var phone=/^tel:/i.test(href);
-  var whatsapp=/^(?:https?:\/\/)?(?:wa\.me\/|api\.whatsapp\.com\/send)/i.test(href);
-  if (!phone && !whatsapp) return;
-  if (window.ttq && typeof window.ttq.track==='function'){
-    var channel=whatsapp ? 'WhatsApp' : 'Phone';
-    window.ttq.track('ClickButton',{description:channel+' button click',button_name:channel});
+(function(){
+  var endpoint='https://alrowad-sofa-events.onrender.com/events';
+  function cookie(name){
+    var match=document.cookie.match(new RegExp('(?:^|; )'+name+'=([^;]*)'));
+    try{return match ? decodeURIComponent(match[1]) : '';}catch(e){return '';}
   }
-},true);
+  document.addEventListener('click',function(event){
+    var el=event.target && event.target.closest ? event.target.closest('a[href]') : null;
+    if(!el) return;
+    var href=el.getAttribute('href')||'';
+    var phone=/^tel:/i.test(href);
+    var whatsapp=/^(?:https?:\/\/)?(?:wa\.me\/|api\.whatsapp\.com\/send)/i.test(href);
+    if(!phone && !whatsapp) return;
+    var channel=whatsapp ? 'WhatsApp' : 'Phone';
+    var id=window.crypto && typeof window.crypto.randomUUID==='function'
+      ? window.crypto.randomUUID() : 'click_'+Date.now()+'_'+Math.random().toString(36).slice(2);
+    if(window.ttq && typeof window.ttq.track==='function'){
+      try{window.ttq.track('ClickButton',{description:channel+' button click',button_name:channel},{event_id:id});}catch(e){}
+    }
+    var payload={event:'ClickButton',channel:channel,event_id:id,page_url:location.origin+location.pathname};
+    var ttp=cookie('_ttp');
+    var ttclid=new URLSearchParams(location.search).get('ttclid');
+    if(ttp) payload.ttp=ttp;
+    if(ttclid) payload.ttclid=ttclid;
+    var body=JSON.stringify(payload);
+    // A simple cross-origin beacon survives navigation without a preflight.
+    try{
+      if(navigator.sendBeacon && navigator.sendBeacon(endpoint,new Blob([body],{type:'text/plain;charset=UTF-8'}))) return;
+    }catch(e){}
+    fetch(endpoint,{method:'POST',headers:{'Content-Type':'text/plain;charset=UTF-8'},body:body,keepalive:true,credentials:'omit'}).catch(function(){});
+  },true);
+})();
 </script>
 <!-- End contact-button click tracking -->
 
